@@ -17,10 +17,10 @@ int main(){
 
 
         printf("1. Get External IP\n");
-        printf("2. Get Interfaces List \n");
-        printf("3. Restart Interfaces(TODO) \n");
+        printf("2. Get Interfaces List\n");
+        printf("3. Restart Interfaces(TODO)\n");
         printf("4. Exit\n\n\n");
-        printf("Enter your choice :  ");        		
+        printf("Enter your choice: ");        		
         
         scanf(" %c",&op);
 		
@@ -103,11 +103,11 @@ int main(){
                break;
 }
             }else if(op == '3') {
-                printf("TODO");
+                printf("TODO\n");
             }else if(op == '4') {
                 exit(0);
             }else{
-                printf("Invalid Input");
+                printf("Invalid Input\n");
             }
 }
       
