@@ -23,14 +23,12 @@ int main()
         scanf("%d",&choice);
              
      
-         switch(choice)
+        if choice = "1"
         {
-            case 1:
-{
-    	struct addrinfo hints = {0}, *addrs;
+        struct addrinfo hints = {0}, *addrs;
     	hints.ai_family = AF_INET;
     	hints.ai_socktype = SOCK_STREAM;
-   	 hints.ai_protocol = 0;
+   	    hints.ai_protocol = 0;
 
     int rval = getaddrinfo("ifconfig.me", "80", &hints, &addrs);
     if (rval != 0) {
@@ -78,12 +76,13 @@ int main()
     close(s);
     freeaddrinfo(addrs);
     break;
-}        
-            case 2:
-{
-    unsigned int max_interfaces = 255;
-    char ifname[IFNAMSIZ];
-    char prev_ifname[IFNAMSIZ];
+         }
+ 
+            else if choice = "2"
+            {
+            unsigned int max_interfaces = 255;
+            char ifname[IFNAMSIZ];
+            char prev_ifname[IFNAMSIZ];
 
     for (unsigned int if_id=1; if_id<max_interfaces; if_id++) {
         if_indextoname(if_id, ifname);
@@ -98,17 +97,21 @@ int main()
             snprintf(prev_ifname, sizeof(prev_ifname), "%s", ifname);
         }   
     }
-}
+            }
 
 
                 break;
         
-            case 3:
+            else if choice = "3"
+            {
                 break;
+            }
         
-            case 4:
+            else if choice = "4"
+            {
                 exit(0);
-        }
+            }
+
     }
     return 0;
 }
