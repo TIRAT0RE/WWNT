@@ -17,7 +17,7 @@ sudo apt-get install libc6-dev
 ```
 git clone https://github.com/TIRAT0RE/WWNT
 
-gcc wwnt_v2.c -o wwnt
+gcc wwnt_v3.c -o wwnt
 
 ./wwnt
 ```
