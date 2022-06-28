@@ -66,6 +66,7 @@ void f1()
 
     close(s);
     freeaddrinfo(addrs);
+    return(1);
 }
 
 void f2()
@@ -91,6 +92,7 @@ void f2()
         }
     }    
 
+            return(1):
 }
 
 int main(int args, char *argv[])
