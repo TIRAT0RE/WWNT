@@ -17,14 +17,14 @@ void f1()
     if (rval != 0)
     {
         fprintf(stderr,"getaddrinfo failed: %s\n", gai_strerror(rval));
-        return 1;
+        return;
     }
 
     int s = socket(addrs->ai_family, addrs->ai_socktype, addrs->ai_protocol);
     if (s == -1)
     {
         perror("socket failed");
-        return 1;
+        return;
     }
     rval = connect(s, addrs->ai_addr, addrs->ai_addrlen);
 
@@ -33,16 +33,16 @@ void f1()
     rval = send(s, cmd, strlen(cmd), 0);
     if (rval == -1)
     {
-        perror("send failed");
-        return 1;
+        perror("send failed\n");
+        return;
     }
 
     char buf[1000] = {0};
     rval = recv(s, buf, sizeof(buf), 0);
     if (rval == -1)
     {
-        perror("recv failed");
-        return 1;
+        perror("recv failed\n");
+        return;
     }
 
     char *start = buf, *end;
@@ -66,7 +66,7 @@ void f1()
 
     close(s);
     freeaddrinfo(addrs);
-    return(1);
+    return;
 }
 
 void f2()
@@ -78,7 +78,8 @@ void f2()
     for (unsigned int if_id=1; if_id<max_interfaces; if_id++)
     {
         if_indextoname(if_id, ifname);
-        if  (ifname[1] == '\1'){
+        if (ifname[1] == '\1')
+        {
             continue;
         }
        else if(strcmp(ifname, prev_ifname) == 0)
@@ -92,7 +93,7 @@ void f2()
         }
     }    
 
-            return(1);
+            return;
 }
 
 int main(int args, char *argv[])
@@ -100,6 +101,7 @@ int main(int args, char *argv[])
         char op;
         printf("\n\t White Wolf Network Toolkit\n");
         printf("\n\t Written by TIRATORE\n");
+
     while(1)
     {
         printf("\n1. Get External IP\n");
