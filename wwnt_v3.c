@@ -98,11 +98,11 @@ void f2()
 int main(int args, char *argv[])
 {
         char op;
-        printf("\n\n\t White Wolf Network Toolkit\n\n\n");
-        printf("\n\n\t Written by TIRATORE\n\n\n");
+        printf("\n\t White Wolf Network Toolkit\n");
+        printf("\n\t Written by TIRATORE\n");
     while(1)
     {
-        printf("1. Get External IP\n");
+        printf("\n1. Get External IP\n");
         printf("2. Get Interfaces List\n");
         printf("3. Restart Interfaces(TODO)\n");
         printf("4. Exit\n\n\n");
