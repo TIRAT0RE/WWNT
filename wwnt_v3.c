@@ -92,7 +92,7 @@ void f2()
         }
     }    
 
-            return(1):
+            return(1);
 }
 
 int main(int args, char *argv[])
