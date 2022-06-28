@@ -66,7 +66,6 @@ void f1()
 
     close(s);
     freeaddrinfo(addrs);
-    break;
 }
 
 void f2()
@@ -92,7 +91,6 @@ void f2()
         }
     }    
 
-            break;
 }
 
 int main(int args, char *argv[])
@@ -128,6 +126,10 @@ int main(int args, char *argv[])
         default:
             printf("Invalid Input\n");
             break;
+        if (op == "4")
+        {
+            break;
+        }
         }
     }
     return 0;
