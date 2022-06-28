@@ -95,15 +95,14 @@ void f2()
             return(1);
 }
 
-int main(int args, char *argv[])
-{
-    while(1)
-    {
         char op;
         printf("\n\n\t White Wolf Network Toolkit\n\n\n");
         printf("\n\n\t Written by TIRATORE\n\n\n");
 
-
+int main(int args, char *argv[])
+{
+    while(1)
+    {
         printf("1. Get External IP\n");
         printf("2. Get Interfaces List\n");
         printf("3. Restart Interfaces(TODO)\n");
@@ -129,7 +128,7 @@ int main(int args, char *argv[])
             printf("Invalid Input\n");
             break;
         }
-        if (op == "4")
+        if (op == '4')
         {
             break;
         }
