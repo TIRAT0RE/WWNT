@@ -128,10 +128,10 @@ int main(int args, char *argv[])
         default:
             printf("Invalid Input\n");
             break;
+        }
         if (op == "4")
         {
             break;
-        }
         }
     }
     return 0;
