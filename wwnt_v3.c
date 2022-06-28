@@ -23,14 +23,12 @@ int main(){
         printf("Enter your choice: ");        		
         
         scanf(" %c",&op);
-		
-        if(op == '1' || op == '2' || op == '3' || op == '4') {
 
-            if(op == '1') {
-                 struct addrinfo hints = {0}, *addrs;
+        if(op == '1') {
+            struct addrinfo hints = {0}, *addrs;
         hints.ai_family = AF_INET;
         hints.ai_socktype = SOCK_STREAM;
-         hints.ai_protocol = 0;
+        hints.ai_protocol = 0;
 
     int rval = getaddrinfo("ifconfig.me", "80", &hints, &addrs);
     if (rval != 0) {
@@ -79,7 +77,7 @@ int main(){
     freeaddrinfo(addrs);
     break;
 
-            }else if(op == '2') {
+        }else if(op == '2') {
                 {
     unsigned int max_interfaces = 255;
     char ifname[IFNAMSIZ];
@@ -100,20 +98,15 @@ int main(){
 }    
 
 
-               break;
+            break;
 }
-            }else if(op == '3') {
-                printf("TODO\n");
-            }else if(op == '4') {
-                exit(0);
-            }else{
-                printf("Invalid Input\n");
-            }
-}
-      
-
+        }else if(op == '3') {
+            printf("TODO\n");
+        }else if(op == '4') {
+            exit(0);
+        }else{
+            printf("Invalid Input\n");
+        }
+    }
     return 0;
 }
-}
-
-
